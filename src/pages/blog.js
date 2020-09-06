@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
 
 const BlogGrid = styled.div`
@@ -21,6 +21,7 @@ const BlogPage = () => {
               title
               date
             }
+            fields { slug }
           }
         }
       }
@@ -30,7 +31,8 @@ const BlogPage = () => {
 
   const posts = data.allMarkdownRemark.edges.map(edge => ({
     title: edge.node.frontmatter.title,
-    date: edge.node.frontmatter.date
+    date: edge.node.frontmatter.date,
+    slug: edge.node.fields.slug
   }))
   
 
@@ -40,10 +42,12 @@ const BlogPage = () => {
       <BlogGrid>
         {
           posts.map((post, i) => (
-            <Post key={'blog-post-'+i}>
+            <Link key={'blog-post-'+i} to={`/blog/${post.slug}`}>
+              <Post >
               <h2>{post.title}</h2>
               <p>{post.date}</p>
             </Post>
+            </Link>
           ))
         }
       </BlogGrid>
