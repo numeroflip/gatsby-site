@@ -1,12 +1,11 @@
 import React from 'react'
 import Layout from '../components/Layout'
-
-const IndexPage = () => {
-  return (
+const Page404 = () => {
+  return(
     <Layout>
-      <h1>Boborján vagyok</h1>
+      <h1>404 error</h1>
     </Layout>
   )
 }
 
-export default IndexPage
+export default Page404

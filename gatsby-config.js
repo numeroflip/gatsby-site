@@ -5,6 +5,10 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
-}
+  siteMetadata: {
+    title: 'I love you',
+    author: 'Aron Berenyi'
+  },
+
+  plugins: [`gatsby-plugin-material-ui`],
+};
