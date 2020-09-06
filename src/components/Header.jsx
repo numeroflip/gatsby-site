@@ -7,12 +7,14 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 const AppBar = styled.header`
 padding : 1rem;
 display: flex;
+flex-direction: column;
 justify-content: space-between;
 align-items: center;
 
 `
 
 const Logo = styled.div`
+margin: 1rem;
   a {
     color: black;
     font-size: 1.3rem;
@@ -24,6 +26,7 @@ const Logo = styled.div`
 `
 
 const LinkWrapper = styled.ul`
+padding: 0;
 list-style: none;
 display: grid;
 grid-auto-flow: column;
@@ -32,11 +35,16 @@ align-items: center;
 justify-items: center;
 margin: 0;
 
+.active {
+  background-color: rgba(0,0,0,0.05);
+}
+
 a {
   color: black;
   text-decoration: none;
-  padding: 1rem;
+  padding: .6rem 1rem;
   border-radius: 6px;
+  transition: ease-out .2s all;
 
   &:hover {
     background-color: rgba(0,0,0,0.05);
@@ -67,7 +75,7 @@ export default function Header() {
     <AppBar>
     <Logo><Link to='/'>{data.site.siteMetadata.title}</Link></Logo>
       <LinkWrapper>
-        {linkList.map(link => (<Link key={'topbar-link'+link.dest} to={link.dest}>{link.name}</Link>))}
+        {linkList.map(link => (<Link activeClassName='active' key={'topbar-link'+link.dest} to={link.dest}>{link.name}</Link>))}
       </LinkWrapper>
     </AppBar>
   );

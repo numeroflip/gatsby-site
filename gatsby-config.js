@@ -6,9 +6,18 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'I love you',
+    title: 'I don\'t love you',
     author: 'Aron Berenyi'
   },
 
-  plugins: [`gatsby-plugin-material-ui`],
+  plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    },
+    'gatsby-transformer-remark'
+  ],
 };

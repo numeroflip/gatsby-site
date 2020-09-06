@@ -8,14 +8,15 @@ const StyledLayout = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: auto;
 `
 
 const Container = styled.div`
-display: flex;
-flex-direction: column;
+display: gird;
 align-items: center;
-justify-content: center;
-max-width: 1200px;
+justify-items: center;
+width: 100%;
+max-width: 900px;
 margin: 0 auto;
 padding: 1rem;
 `
@@ -29,9 +30,7 @@ const Layout = ({children}) => (
     <Container>
       {children}
     </Container>
-    <Container style={{marginTop: 'auto'}}>
       <Footer />
-    </Container>
   </StyledLayout>
 )
 

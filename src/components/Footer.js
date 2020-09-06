@@ -1,7 +1,14 @@
 import React from 'react'
-import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import {graphql, useStaticQuery } from 'gatsby'
+import styled from 'styled-components'
+
+const FooterWrapper = styled.footer`
+  text-align: center;
+  margin: 1rem;
+  margin-top: auto;
+  font-size: 0.8rem;
+`
 
 const Footer = () => {
 
@@ -15,11 +22,9 @@ const Footer = () => {
     }
   `)
   return (
-    <footer>
-      <Container>
+    <FooterWrapper>
         <Typography>Created by {data.site.siteMetadata.author}</Typography>
-      </Container>
-    </footer>
+    </FooterWrapper>
   )
 }
 
