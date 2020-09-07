@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-blog-js","path":"/blog/react","result":{"pageContext":{"slug":"react"}},"staticQueryHashes":["3159585216","440568431"]}
+{"componentChunkName":"component---src-templates-blog-js","path":"/blog/react","result":{"data":{"markdownRemark":{"frontmatter":{"date":"2020-09-03","title":"React"},"html":"<p>React is good. Ollalalalalalaa.</p>\n<p>The end.</p>"}},"pageContext":{"slug":"react"}},"staticQueryHashes":["3159585216","440568431"]}

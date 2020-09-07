@@ -9,3 +9,5 @@ date: "2020-09-06"
 1. Gatsby
 2. GraphQL
 3. React
+
+![Grass](./funny-bird.jpg)
