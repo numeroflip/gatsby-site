@@ -1,1 +1,1 @@
-{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"React","date":"2020-09-03"},"fields":{"slug":"react"}}},{"node":{"frontmatter":{"title":"What the Gatsby?!","date":"2020-09-06"},"fields":{"slug":"gatsby"}}}]}}}
+{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"What the Gatsby?!","date":"2020-09-06"},"fields":{"slug":"gatsby"}}},{"node":{"frontmatter":{"title":"React","date":"2020-09-03"},"fields":{"slug":"react"}}}]}}}

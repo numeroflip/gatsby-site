@@ -14,14 +14,17 @@ const BlogPage = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allContentfulBlogPost (
+        sort: {
+          fields: publishedDate,
+          order: DESC
+        }
+      ) {
         edges {
           node {
-            frontmatter {
               title
-              date
-            }
-            fields { slug }
+              publishedDate (formatString: "MMMM Do, YYYY")
+              slug
           }
         }
       }
@@ -29,10 +32,10 @@ const BlogPage = () => {
   `)
 
 
-  const posts = data.allMarkdownRemark.edges.map(edge => ({
-    title: edge.node.frontmatter.title,
-    date: edge.node.frontmatter.date,
-    slug: edge.node.fields.slug
+  const posts = data.allContentfulBlogPost.edges.map(edge => ({
+    title: edge.node.title,
+    date: edge.node.publishedDate,
+    slug: edge.node.slug
   }))
   
 
